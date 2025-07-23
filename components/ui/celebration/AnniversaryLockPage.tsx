@@ -35,7 +35,9 @@ export default function AnniversaryLockPage() {
   return (
     <div className={styles.lockBg}>
       <span className={styles.heartAccent}>💖</span>
-      <Card className="w-full max-w-md shadow-2xl border-2 border-pink-200 bg-white/80 backdrop-blur-lg">
+      <Card
+        className={`w-full max-w-md shadow-2xl border-2 border-pink-200 bg-white/80 backdrop-blur-lg ${styles.cardPadding}`}
+      >
         <CardHeader>
           <CardTitle className="text-center text-pink-500 text-2xl font-bold drop-shadow-lg">
             Anniversary's Lock
