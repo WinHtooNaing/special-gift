@@ -1,22 +1,32 @@
 "use client";
 
 import styles from "./AnniversaryCelebration.module.css";
-import { CardHeader, CardTitle, CardContent, CardFooter } from "@/components/ui/card";
+import {
+  CardHeader,
+  CardTitle,
+  CardContent,
+  CardFooter,
+  Card,
+} from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 export function AnniversaryCelebration() {
   return (
     <div className={styles.heartCard}>
-      <CardHeader>
-        <CardTitle className="text-center text-2xl text-white">Hello My Girl!</CardTitle>
-      </CardHeader>
-      <CardContent className="text-center space-y-4 text-white">
-        <p>Special gift for you.</p>
-      </CardContent>
-      <CardFooter className="flex justify-center">
-            <Link href={"/anni-lock"} ><Button className="px-8 py-4 text-lg mt-10">Start!</Button></Link>
-        </CardFooter>
+      <div className={styles.heartContent}>
+        <h1 className="text-white text-center text-xl font-bold drop-shadow-lg mb-2">
+          Hello My Girl!💖
+        </h1>
+        <p className="text-white text-lg font-light mb-4 drop-shadow-md text-center">
+          special gift for you!
+        </p>
+        <Link href={"/anni-lock"} className="flex justify-center">
+          <Button className="px-8 py-4 text-lg mt-2 bg-white text-pink-500 font-semibold shadow-lg hover:bg-pink-100 transition">
+            Start!
+          </Button>
+        </Link>
+      </div>
     </div>
   );
 }

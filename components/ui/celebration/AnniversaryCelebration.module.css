@@ -1,13 +1,62 @@
 .heartCard {
   position: relative;
-  width: 350px;
-  height: 320px;
-  background: #ff6b81;
-  margin: 40px auto;
-  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+  width: 200px;
+  height: 180px;
+  background-color: #ff6b81;
+  margin: 100px auto;
+  transform: rotate(-45deg);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.heartCard::before,
+.heartCard::after {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 180px;
+  background-color: #ff6b81;
+  border-radius: 50%;
+}
+
+.heartCard::before {
+  top: -100px;
+  left: 0;
+}
+
+.heartCard::after {
+  left: 100px;
+  top: 0;
+}
+
+.heartCard > * {
+  transform: rotate(45deg); /* Rotate inner content back to normal */
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+}
+
+/* heart lock */
+.lockBg {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ffb6b9 0%, #fae1dd 100%);
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.heartAccent {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 4rem;
+  color: #fb6f92;
+  filter: drop-shadow(0 2px 8px #fb6f92aa);
+  animation: pulseHeart 1.5s infinite;
+}
+
+@keyframes pulseHeart {
+  0%, 100% { transform: translateX(-50%) scale(1);}
+  50% { transform: translateX(-50%) scale(1.15);}
 }
