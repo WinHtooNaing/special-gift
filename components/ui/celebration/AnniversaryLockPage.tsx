@@ -24,10 +24,13 @@ export default function AnniversaryLockPage() {
 
   const handleCheck = () => {
     if (otp === "1322024") {
-      setMessage("✅ Correct OTP!");
+      setMessage("💖 Yey! 💖");
       setError(false);
+      setTimeout(() => {
+        window.location.href = "/menu"; // Redirect to celebration page
+      }, 1000); // Redirect after 2 seconds
     } else {
-      setMessage("❌ Invalid OTP");
+      setMessage("💔 Hrrm! 💔");
       setError(true);
     }
   };
@@ -69,7 +72,7 @@ export default function AnniversaryLockPage() {
         <CardFooter className="flex justify-center">
           <Button
             onClick={handleCheck}
-            className="w-full bg-[#fb6f92] hover:bg-pink-400 text-white font-bold text-lg shadow-lg transition"
+            className="w-full bg-[#fb6f92] hover:bg-pink-400 text-white font-bold text-lg shadow-lg transition cursor-pointer"
           >
             Unlock My Heart
           </Button>

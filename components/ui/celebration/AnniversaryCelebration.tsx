@@ -21,8 +21,11 @@ export function AnniversaryCelebration() {
         <p className="text-white text-lg font-light mb-4 drop-shadow-md text-center">
           special gift for you!
         </p>
-        <Link href={"/anni-lock"} className="flex justify-center">
-          <Button className="px-8 py-4 text-lg mt-2 bg-white text-pink-500 font-semibold shadow-lg hover:bg-pink-100 transition">
+        <Link
+          href={"/anni-lock"}
+          className="flex justify-center cursor-pointer"
+        >
+          <Button className="px-8 py-4 text-lg mt-2 bg-white text-pink-500 font-semibold shadow-lg hover:bg-pink-100 transition cursor-pointer">
             Start!
           </Button>
         </Link>
